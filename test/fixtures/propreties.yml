@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image_1: 
+  image_2: 
+  image_3: 
+  image_4: 
+  image_5: 
+  image_6: 
+  image_7: 
+  image_8: 
+  image_9: 
+  image_10: 
+  name: MyString
+  description: MyText
+  people: 1
+  bedrooms: 1
+  bathrooms: 1
+  wifi: 
+  parking: 
+  lift: 
+  kitchen: 1
+  other: MyString
+  price: 1
+  street: MyString
+  number: 1
+  zipcode: 1
+  city: MyString
+  type_of_street: MyString
+
+two:
+  image_1: 
+  image_2: 
+  image_3: 
+  image_4: 
+  image_5: 
+  image_6: 
+  image_7: 
+  image_8: 
+  image_9: 
+  image_10: 
+  name: MyString
+  description: MyText
+  people: 1
+  bedrooms: 1
+  bathrooms: 1
+  wifi: 
+  parking: 
+  lift: 
+  kitchen: 1
+  other: MyString
+  price: 1
+  street: MyString
+  number: 1
+  zipcode: 1
+  city: MyString
+  type_of_street: MyString

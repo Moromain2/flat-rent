@@ -1,0 +1,2 @@
+class Proprety < ApplicationRecord
+end

@@ -1,0 +1,9 @@
+<h1>Propreties#index</h1>
+<p>Find me in app/views/propreties/index.html.erb</p>
+
+<% @proprety.each do |proprety| %>
+
+  <h3><%= proprety.name %></h3>
+  <%= link_to 'Découvrir', proprety_path(proprety) %>
+
+<% end %>

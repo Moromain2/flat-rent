@@ -1,0 +1,69 @@
+<%= form_for @proprety do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br>
+
+  <%= f.label :people %>
+  <%= f.number_field :people %>
+  <br>
+
+  <%= f.label :bedrooms %>
+  <%= f.number_field :bedrooms %>
+  <br>
+
+  <%= f.label :bathrooms %>
+  <%= f.number_field :bathrooms %>
+  <br>
+
+  <%= f.label :wifi %>
+  <%= f.check_box :wifi %>
+  <br>
+
+  <%= f.label :parking %>
+  <%= f.check_box :parking %>
+  <br>
+
+  <%= f.label :lift %>
+  <%= f.check_box :lift %>
+  <br>
+
+  <%= f.label :kitchen %>
+  <%= f.number_field :kitchen %>
+  <br>
+
+  <%= f.label :other %>
+  <%= f.text_field :other %>
+  <br>
+
+  <%= f.label :price %>
+  <%= f.number_field :price %>
+  <br>
+
+  <%= f.label :street %>
+  <%= f.text_field :street %>
+  <br>
+
+  <%= f.label :number %>
+  <%= f.number_field :number %>
+  <br>
+
+  <%= f.label :zipcode %>
+  <%= f.number_field :zipcode %>
+  <br>
+
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+  <br>
+
+  <%= f.label :type_of_street %>
+  <%= f.text_field :type_of_street %>
+  <br>
+
+  <%= f.submit 'Enregistrer' %>
+
+<% end %>
