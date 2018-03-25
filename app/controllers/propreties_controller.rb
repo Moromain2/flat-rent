@@ -12,7 +12,7 @@ class PropretiesController < ApplicationController
   def update
     @proprety = Proprety.find(params[:id])
     @proprety.update(proprety_params)
-    redirect_to root_path
+    redirect_to proprety_path
   end
 
   def delete

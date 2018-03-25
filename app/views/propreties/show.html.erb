@@ -1,6 +1,47 @@
+<%= render 'navbar' %>
+
 <h1><%= @proprety.name %></h1>
+
+<h3>Description</h3>
 <p><%= @proprety.description %></p>
 
+<h3>Caractéristiques du logement à <%= @proprety.city %></h3>
 <p><%= @proprety.people %> personnes peuvent occuper ce logement</p>
-<p><%= @proprety.bedrooms %> chambres</p>
-<p><%= @proprety.bathrooms %> salles de bain</p>
+<p>Le logement dispose de :</p>
+<ul>
+  <li><%= @proprety.bedrooms %>
+          <% if @proprety.bedrooms == 1 %>
+          chambre
+          <% else %>
+          chambres
+          <% end %>
+  </li>
+  <li><%= @proprety.bathrooms %>
+          <% if @proprety.bathrooms == 1 %>
+          salle de bain
+          <% else %>
+          salles de bain
+          <% end %>
+  </li>
+  <li><%= @proprety.kitchen %>
+          <% if @proprety.kitchen == 1 %>
+          cuisine
+          <% else %>
+          cuisines
+          <% end %>
+  </li>
+  <li>
+    <%= @proprety.other %>
+  </li>
+</ul>
+
+<h3>Prix</h3>
+<p><%= @proprety.price %>€ / semaine </p>
+
+<p><%= @proprety.other %></p>
+
+<h3>Localisation du logement</h3>
+<p>Le logement se situe <strong><%= @proprety.number %> <%= @proprety.type_of_street %> <%= @proprety.street %></strong> à <%= @proprety.city %> (<%= @proprety.zipcode %>)</p>
+
+<%= link_to 'Editer', edit_proprety_path %>
+<%= link_to 'Voir tous les logements', root_path %>
