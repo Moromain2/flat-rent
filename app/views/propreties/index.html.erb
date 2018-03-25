@@ -1,11 +1,16 @@
 <%= render 'navbar' %>
 
-<h1>Propreties#index</h1>
-<p>Find me in app/views/propreties/index.html.erb</p>
+<h1>Louez votre prochain lieu de vacances</h1>
 
-<% @proprety.each do |proprety| %>
+<div class="presentation">
+  <% @proprety.each do |proprety| %>
 
-  <h3><%= proprety.name %></h3>
-  <%= link_to 'Découvrir', proprety_path(proprety) %>
+  <div>
+    <h3><%= proprety.name %></h3>
+    <small class="location"><%= proprety.city %></small>
+    <p><%= proprety.description %></p>
+    <%= link_to 'Découvrir', proprety_path(proprety) %>
+  </div>
 
-<% end %>
+  <% end %>
+</div>
