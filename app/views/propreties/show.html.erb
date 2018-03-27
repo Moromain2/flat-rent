@@ -2,6 +2,8 @@
 
 <h1><%= @proprety.name %></h1>
 
+<%= image_tag(@proprety.image_url.to_s) %>
+
 <h3>Description</h3>
 <p><%= @proprety.description %></p>
 
@@ -30,9 +32,11 @@
           cuisines
           <% end %>
   </li>
+  <% if @proprety.other.present? %>
   <li>
     <%= @proprety.other %>
   </li>
+  <% end %>
   <li>
     Accès internet:
   </li>
@@ -47,10 +51,15 @@
 <h3>Prix</h3>
 <p><%= @proprety.price %>€ / semaine </p>
 
-<p><%= @proprety.other %></p>
-
 <h3>Localisation du logement</h3>
 <p>Le logement se situe <strong><%= @proprety.number %> <%= @proprety.type_of_street %> <%= @proprety.street %></strong> à <%= @proprety.city %> (<%= @proprety.zipcode %>)</p>
+
+<%= image_tag(@proprety.image2_url.to_s) %>
+<%= image_tag(@proprety.image3_url.to_s) %>
+<%= image_tag(@proprety.image4_url.to_s) %>
+<%= image_tag(@proprety.image5_url.to_s) %>
+<%= image_tag(@proprety.image6_url.to_s) %>
+<%= image_tag(@proprety.image7_url.to_s) %>
 
 <%= link_to 'Editer', edit_proprety_path %>
 <%= link_to 'Voir tous les logements', root_path %>

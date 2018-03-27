@@ -7,6 +7,7 @@
 
   <div>
     <h3><%= proprety.name %></h3>
+    <%= image_tag(proprety.image2_url.to_s) %>
     <small class="location"><%= proprety.city %></small>
     <p><%= proprety.description %></p>
     <%= link_to 'Découvrir', proprety_path(proprety) %>

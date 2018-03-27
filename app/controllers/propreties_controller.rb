@@ -37,6 +37,6 @@ class PropretiesController < ApplicationController
 
   private
     def proprety_params
-      params.require(:proprety).permit(:name, :description, :people, :bedrooms, :bathrooms, :wifi, :parking, :lift, :kitchen, :other, :price, :street, :number, :zipcode, :city, :type_of_street)
+      params.require(:proprety).permit(:name, :description, :people, :bedrooms, :bathrooms, :wifi, :parking, :lift, :kitchen, :other, :price, :street, :number, :zipcode, :city, :type_of_street, :image, :image2, :image3, :image4, :image5, :image6, :image7)
     end
 end
