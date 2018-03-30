@@ -1,17 +1,26 @@
 <%= render 'navbar' %>
 
-<h1>Louez votre prochain lieu de vacances</h1>
+<section class="landing-page">
 
-<div class="presentation">
-  <% @proprety.each do |proprety| %>
+  <h1 class="landing-title">Envie de partir en vacances ?</h1>
+  <p class="landing-sub-text">Faites votre choix.</p>
 
-  <div>
-    <h3><%= proprety.name %></h3>
-    <%= image_tag(proprety.image2_url.to_s) %>
-    <small class="location"><%= proprety.city %></small>
-    <p><%= proprety.description %></p>
-    <%= link_to 'Découvrir', proprety_path(proprety) %>
+  <div class="presentation">
+    <% @proprety.each do |proprety| %>
+
+      <div class="proprety-card">
+        <div class="proprety-card-image">
+          <%= image_tag(proprety.image2_url.to_s) %>
+        </div>
+        <div class="proprety-card-content">
+          <h3><%= proprety.name %></h3>
+          <small class="location"><%= proprety.city %></small>
+          <p><%= proprety.description.truncate(75) %></p>
+          <%= link_to 'Découvrir', proprety_path(proprety) %>
+        </div>
+      </div>
+
+    <% end %>
   </div>
 
-  <% end %>
-</div>
+</section>
