@@ -34,6 +34,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'carrierwave'
 gem 'mini_magick'
 
+# Contact Form
+gem 'mail_form'
+gem 'simple_form'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

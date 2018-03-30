@@ -1,0 +1,17 @@
+<%= simple_form_for @contact do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+  <br>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, required: true %>
+  <br>
+
+  <%= f.label :message %>
+  <%= f.text_area :message, as: :text, required: true %>
+  <br>
+
+  <%= f.submit 'Envoyer' %>
+
+<% end %>
