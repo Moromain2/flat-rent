@@ -1,61 +1,62 @@
 <%= form_for @proprety do |f| %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br>
+  <h3>Titre</h3>
+  <div class="edit-title-container">
+    <%= f.text_field :name %>
+  </div>
 
-  <%= f.label :image %>
-  <%= f.file_field :image %>
-  <% if @proprety.image.present? %>
-    <%= image_tag(@proprety.image_url(:thumb).to_s) %>
-  <% end %>
-  <br>
+  <h3>Description</h3>
+  <div class="edit-description-container">
+    <%= f.text_area :description %>
+  </div>
 
-  <%= f.label :image2 %>
-  <%= f.file_field :image2 %>
-  <% if @proprety.image2.present? %>
-    <%= image_tag(@proprety.image2_url(:thumb).to_s) %>
-  <% end %>
-  <br>
-
-  <%= f.label :image3 %>
-  <%= f.file_field :image3 %>
-  <% if @proprety.image3.present? %>
-    <%= image_tag(@proprety.image3_url(:thumb).to_s) %>
-  <% end %>
-  <br>
-
-  <%= f.label :image4 %>
-  <%= f.file_field :image4 %>
-  <% if @proprety.image4.present? %>
-    <%= image_tag(@proprety.image4_url(:thumb).to_s) %>
-  <% end %>
-  <br>
-
-  <%= f.label :image5 %>
-  <%= f.file_field :image5 %>
-  <% if @proprety.image5.present? %>
-    <%= image_tag(@proprety.image5_url(:thumb).to_s) %>
-  <% end %>
-  <br>
-
-  <%= f.label :image6 %>
-  <%= f.file_field :image6 %>
-  <% if @proprety.image6.present? %>
-    <%= image_tag(@proprety.image6_url(:thumb).to_s) %>
-  <% end %>
-  <br>
-
-  <%= f.label :image7 %>
-  <%= f.file_field :image7 %>
-  <% if @proprety.image7.present? %>
-    <%= image_tag(@proprety.image7_url(:thumb).to_s) %>
-  <% end %>
-  <br>
-
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-  <br>
+  <h3>Images</h3>
+  <div class="edit-images-container">
+    <div class="edit-big-image">
+      <%= f.file_field :image %>
+      <% if @proprety.image.present? %>
+        <%= image_tag(@proprety.image_url.to_s) %>
+      <% end %>
+    </div>
+    <div class="edit-small-images">
+      <div class="edit-small-image">
+        <%= f.file_field :image2 %>
+        <% if @proprety.image2.present? %>
+          <%= image_tag(@proprety.image2_url.to_s) %>
+        <% end %>
+      </div>
+      <div class="edit-small-image">
+        <%= f.file_field :image3 %>
+        <% if @proprety.image3.present? %>
+          <%= image_tag(@proprety.image3_url.to_s) %>
+        <% end %>
+      </div>
+      <div class="edit-small-image">
+        <%= f.file_field :image4 %>
+        <% if @proprety.image4.present? %>
+          <%= image_tag(@proprety.image4_url.to_s) %>
+        <% end %>
+      </div>
+      <div class="edit-small-image">
+        <%= f.file_field :image5 %>
+        <% if @proprety.image5.present? %>
+          <%= image_tag(@proprety.image5_url.to_s) %>
+        <% end %>
+      </div>
+      <div class="edit-small-image">
+        <%= f.file_field :image6 %>
+        <% if @proprety.image6.present? %>
+          <%= image_tag(@proprety.image6_url.to_s) %>
+        <% end %>
+      </div>
+      <div class="edit-small-image">
+        <%= f.file_field :image7 %>
+        <% if @proprety.image7.present? %>
+          <%= image_tag(@proprety.image7_url.to_s) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
   <%= f.label :people %>
   <%= f.number_field :people %>

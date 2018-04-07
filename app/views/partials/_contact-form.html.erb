@@ -1,17 +1,18 @@
 <%= simple_form_for @contact do |f| %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name, required: true %>
-  <br>
 
-  <%= f.label :email %>
-  <%= f.email_field :email, required: true %>
-  <br>
+  <div class="contact-form-fields">
+    <h3 class="form-label">Nom</h3>
+    <%= f.text_field :name, required: true, placeholder: 'Pour savoir qui nous contacte' %>
 
-  <%= f.label :message %>
-  <%= f.text_area :message, as: :text, required: true %>
-  <br>
+    <h3 class="form-label">Adresse Email</h3>
+    <%= f.email_field :email, required: true, placeholder: "Pour qu'on puisse vous répondre" %>
 
-  <%= f.submit 'Envoyer' %>
+    <h3 class="form-label">Message</h3>
+    <%= f.text_area :message, as: :text, required: true, placeholder: 'Pour que nous ayons tous les détails' %>
+
+  </div>
+
+  <%= f.submit 'Envoyer', class: 'action-button' %>
 
 <% end %>
