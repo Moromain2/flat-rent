@@ -23,14 +23,17 @@ class PropretiesController < ApplicationController
   end
 
   def index
+    @page_title = 'Accueil'
     @proprety = Proprety.all
   end
 
   def edit
+    @page_title = 'Modifier'
     @proprety = Proprety.find(params[:id])
   end
 
   def show
+    @page_title = 'Location'
     @proprety = Proprety.find(params[:id])
     @propreties = Proprety.all
   end
