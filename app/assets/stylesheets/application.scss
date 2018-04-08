@@ -297,3 +297,50 @@ footer {
   background-color: $orange;
   color: $light-grey;
 }
+
+
+/* ==== SHOW ==== */
+
+.images-slideshow {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 550px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+
+.proprety-info-container {
+  margin-top: 660px;
+}
+
+.proprety-details {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
+  ul {
+    list-style-type: none;
+    padding-left: 25px;
+  }
+}
+
+.margin-title {
+  margin-top: 30px;
+}
+
+.price-box {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  padding: 20px;
+  height: 50%;
+  strong {
+    color: $orange;
+  }
+  p {
+    font-size: 1.4em;
+  }
+}

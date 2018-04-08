@@ -1,67 +1,76 @@
 <%= render 'partials/navbar' %>
 
-<h1><%= @proprety.name %></h1>
+<div class="images-slideshow">
+  <%= image_tag(@proprety.image_url.to_s) %>
+</div>
 
-<%= image_tag(@proprety.image_url.to_s) %>
+<div class="proprety-info-container">
 
-<h3>Description</h3>
-<p><%= @proprety.description %></p>
+  <h1><%= @proprety.name %></h1>
+  <h2>Profitez pleinement de vos vacances à <%= @proprety.city %></h2>
+  <div class="decor-line"></div>
 
-<h3>Caractéristiques du logement à <%= @proprety.city %></h3>
-<p><%= @proprety.people %> personnes peuvent occuper ce logement</p>
-<p>Le logement dispose de :</p>
-<ul>
-  <li><%= @proprety.bedrooms %>
-          <% if @proprety.bedrooms == 1 %>
-          chambre
-          <% else %>
-          chambres
-          <% end %>
-  </li>
-  <li><%= @proprety.bathrooms %>
-          <% if @proprety.bathrooms == 1 %>
-          salle de bain
-          <% else %>
-          salles de bain
-          <% end %>
-  </li>
-  <li><%= @proprety.kitchen %>
-          <% if @proprety.kitchen == 1 %>
-          cuisine
-          <% else %>
-          cuisines
-          <% end %>
-  </li>
-  <% if @proprety.other.present? %>
-  <li>
-    <%= @proprety.other %>
-  </li>
-  <% end %>
-  <li>
-    Accès internet:
-  </li>
-  <li>
-    Parking:
-  </li>
-  <li>
-    Ascenceur:
-  </li>
-</ul>
+  <div class="proprety-details">
 
-<h3>Prix</h3>
-<p><%= @proprety.price %>€ / semaine </p>
+  <div class="proprety-infos">
+    <h3>Description</h3>
+    <p><%= @proprety.description %></p>
 
-<h3>Localisation du logement</h3>
-<p>Le logement se situe <strong><%= @proprety.number %> <%= @proprety.type_of_street %> <%= @proprety.street %></strong> à <%= @proprety.city %> (<%= @proprety.zipcode %>)</p>
+  <h3 class="margin-title">Caractéristiques du logement à <%= @proprety.city %></h3>
+  <p><%= @proprety.people %> personnes peuvent occuper ce logement</p>
+  <p>Le logement dispose de :</p>
+  <ul>
+    <li><%= @proprety.bedrooms %>
+            <% if @proprety.bedrooms == 1 %>
+            chambre
+            <% else %>
+            chambres
+            <% end %>
+    </li>
+    <li><%= @proprety.bathrooms %>
+            <% if @proprety.bathrooms == 1 %>
+            salle de bain
+            <% else %>
+            salles de bain
+            <% end %>
+    </li>
+    <li><%= @proprety.kitchen %>
+            <% if @proprety.kitchen == 1 %>
+            cuisine
+            <% else %>
+            cuisines
+            <% end %>
+    </li>
+    <% if @proprety.other.present? %>
+    <li>
+      <%= @proprety.other %>
+    </li>
+    <% end %>
+    <li>
+      Accès internet:
+    </li>
+    <li>
+      Parking:
+    </li>
+    <li>
+      Ascenceur:
+    </li>
+  </ul>
+  </div>
 
-<%= image_tag(@proprety.image2_url.to_s) %>
-<%= image_tag(@proprety.image3_url.to_s) %>
-<%= image_tag(@proprety.image4_url.to_s) %>
-<%= image_tag(@proprety.image5_url.to_s) %>
-<%= image_tag(@proprety.image6_url.to_s) %>
-<%= image_tag(@proprety.image7_url.to_s) %>
+  <div class="price-box">
+    <h3>Prix</h3>
+    <p><strong><%= @proprety.price %>€</strong> / semaine </p>
+  </div>
 
-<%= link_to 'Editer', edit_proprety_path %>
-<%= link_to 'Voir tous les logements', root_path %>
+  </div>
+
+  <h3 class="margin-title">Localisation du logement</h3>
+  <p>Le logement se situe <strong><%= @proprety.number %> <%= @proprety.type_of_street %> <%= @proprety.street %></strong> à <%= @proprety.city %> (<%= @proprety.zipcode %>)</p>
+
+  <%= link_to 'Editer', edit_proprety_path %>
+  <%= link_to 'Voir tous les logements', root_path %>
+
+</div>
 
 <%= render 'partials/footer' %>
